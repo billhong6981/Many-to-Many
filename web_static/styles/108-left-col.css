@@ -1,0 +1,101 @@
+.container .col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(241, 241, 241, 0.644);
+    margin-left: 0;
+}
+
+.location {
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.location .filters-left {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 94%;
+    height: 20px;
+    border: 1px solid #FF5F55;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.location .filters1-left {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 94%;
+    height: 20px;
+    border: 1px solid #FF5F55;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.display-left {
+    position: relative;
+    width: 95%;
+    height: 218px;
+    margin-left: 5px;
+    padding-left: 5px;
+    background-color: white;
+    visibility: visibble;
+    overflow: scroll;
+    display: list-item;
+}
+
+.display-left ul {
+    list-style-type: none;
+}
+.display-left li {
+    list-style-type: none;
+    padding-left: 2px 25px;
+}
+
+.container .filters-left button:hover,
+.container .filters1-left button:hover {
+	opacity: 0.8;
+}
+
+/**
+ * ------ POPOVER
+ */
+
+.location .filters-left .locations-left:hover .popover,
+.location .filters1-left .locations1-left:hover .popover {
+	display: list-item;
+}
+
+.location .filters-left .popover,
+.location .filters1-left .popover {
+	display: none;
+	list-style-type: none;
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	padding: 4px;
+	margin: 5px -30px 0 -6px;
+	height: 236px;
+    width: 236px;
+    overflow: scroll;
+}
+
+.location .filters-left button,
+.location .filters1-left button {
+    color: red;
+}
+.location .filters-left .popover ul,
+.location .filters1-left .popover ul {
+	list-style-type: none;
+	padding-left: 5px 10px;
+}
+
+.location .filters-left .popover li,
+.location .filters1-left .popover li {
+	margin: 5px 10px;
+}

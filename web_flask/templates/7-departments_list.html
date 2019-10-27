@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>BH</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>Departments</H1>
+        <UL>
+	    {% for department in departments|sort(attribute="name") %}
+	    <LI>{{ department.id }}: <B>{{ department.name }}</B></LI>
+	    {% endfor %}
+        </UL>
+    </BODY>
+</HTML>

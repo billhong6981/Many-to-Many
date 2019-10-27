@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/** Holberton Practice Styles
+ * ------ Header
+ */
+
+header {
+	background-color: rgb(49, 193, 218);
+	background-image: url("../images/BH-logo.png");
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+	padding-top: 2px;
+	padding-bottom: -6px;
+	height: 46px;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	margin-right: 20px;
+}
+div.collapse {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-right: 20px;
+	font-size: 16px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: whitesmoke;
+}
+/* Style the navigation bar */
+.navbar {
+	width: 100%;
+	overflow: auto;
+  }
+  
+  /* Navbar links */
+  .navbar a {
+	float: right;
+	text-align: center;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  /* Navbar links on mouse-over */
+  .navbar a:hover {
+	background-color: #000;
+  }
+  
+  /* Current/active navbar link */
+  .active {
+	background-color: #4CAF50;
+  }
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+	.navbar a {
+	  float: none;
+	  display: block;
+	}
+  }

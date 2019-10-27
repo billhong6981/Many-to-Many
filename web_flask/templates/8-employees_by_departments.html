@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>BH Todos</TITLE>
+    </HEAD>
+    <BODY>
+        <H1>Departments</H1>
+        <UL>
+        {% for department in departments|sort(attribute="name") %}
+        <LI>{{ department.id }}: <B>{{ department.name }}</B>
+            <UL>
+	      {% for employee in department.employees|sort(attribute="first_name") %}
+              <LI>{{ employee.id }}: <B>{{ employee.first_name + " " + employee.last_name }}</LI>
+              {% endfor %}
+            </UL>
+        </LI>
+        {% endfor %}
+        </UL>
+    </BODY>
+</HTML>
+

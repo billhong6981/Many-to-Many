@@ -1,0 +1,101 @@
+.container .col-mid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(232, 232, 233, 0.644);
+    margin-left: 0;
+}
+
+.location {
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.location .filters-mid {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 94%;
+    height: 20px;
+    border: 1px solid #FF5F55;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.location .filters1-mid {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 94%;
+    height: 20px;
+    border: 1px solid #FF5F55;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.display-mid {
+    position: relative;
+    width: 95%;
+    height: 220px;
+    margin-left: 5px;
+    padding-left: 5px;
+    background-color: white;
+    visibility: visibble;
+    overflow: scroll;
+    display: list-item;
+}
+
+.container .filters-mid button:hover,
+.container .filters1-mid button:hover {
+	opacity: 0.8;
+}
+.display-mid ul {
+    list-style-type: none;
+}
+.display-mid li {
+    list-style-type: none;
+    padding-left: 2px 25px;
+}
+
+
+/**
+ * ------ POPOVER
+ */
+
+.location .filters-mid .locations-mid:hover .popover,
+.location .filters1-mid .locations1-mid:hover .popover {
+	display: list-item;
+}
+
+.location .filters-mid .popover,
+.location .filters1-mid .popover {
+	display: none;
+	list-style-type: none;
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	padding: 4px;
+    margin: 5px -30px 0 -6px;
+    height: 236px;
+    width: 236px;
+    overflow: scroll;
+}
+
+.location .filters-mid button,
+.location .filters1-mid button {
+    color: red;
+}
+.location .filters-mid .popover ul,
+.location .filters1-mid .popover ul {
+	list-style-type: none;
+	padding-left: 5px 25px;
+}
+
+.location .filters-mid .popover li,
+.location .filters1-mid .popover li {
+	margin: 5px 25px;
+}

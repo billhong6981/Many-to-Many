@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- HEAD -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>BH todos web app</title>
+
+	<!-- FAVICON -->
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/BH-logo.png') }}">
+
+	<!-- CSS styles -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/108-common.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/108-header.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/108-footer.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/108-left-col.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/108-mid-col.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/108-right-col.css') }}"> 
+
+  </head>
+
+  <!-- BODY -->
+  <body>
+
+	<!-- HEADER -->
+	<header>
+		<div class="navbar">
+			<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+			<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+			<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+		</div>
+	</header>
+
+	<main>
+      <div class="container">
+		<section class="col col-left">
+		  <div class="location">
+            <h1>Employee Search</h1>
+            <section class="filters-left">
+                <div class="locations-left">
+                    Employees...
+                    <ul class="popover" tabindex="0">
+		    {% for department in departments.values()|sort(attribute='name') %}
+                            <li><b>{{ department.name }}:</b>
+                              <ul>
+	{% for employee in department.employees|sort(attribute='first_name') %}
+                <li>{{ employee.first_name + " " + employee.last_name }}</li>
+		{% endfor %}
+                      </ul>
+                            </li>
+	{% endfor %}
+                        </ul>
+                </div>
+                    <button type="submit">Search</button>
+            </section>
+            <p></p>
+            <section class="filters1-left">
+                <div class="locations1-left">
+                    Employee...Todo...
+                        <ul class="popover" tabindex="0">
+
+       {% for department in departments.values()|sort(attribute='name') %}
+                            <li><b>{{ department.name }}:</b>
+                              <ul>
+   {% for employee in department.employees|sort(attribute='first_name') %}
+            <li>{{ employee.first_name + " " + employee.last_name }}</li>
+	{% endfor %}
+                              </ul>
+                            </li>
+	    {% endfor %}
+                        </ul>
+                </div>
+                    <button type="submit">Search</button>
+            </section>
+	</div>
+
+          <div class="display-left">
+	    {%- for employee in emps.values()|sort(attribute='first_name') %}
+	    <p></p>
+ <ul><b>Employee Name: {{ employee.first_name + " " + employee.last_name }}</b>
+ 	      <li>Id: {{ employee.id }}</li>
+	      <li>Email: {{ employee.email }}</li>
+	      {% for department in departments.values() %}
+	      {% if employee in department.employees %}
+    <li>Department: {{ department.name }}</li>
+    <li>Id: {{ department.id }}</li>
+	    {% endif %}
+    {% endfor %}
+    </ul>
+	    {% endfor %}
+          </div>
+		</section>
+
+		<section class="col col-mid">
+            <div class="location">
+                <h1>Todo Search</h1>
+                <section class="filters-mid">
+                    <div class="locations-mid">
+                        Todos...
+                        <ul class="popover" tabindex="0">
+			  {% for todo in todos.values()|sort(attribute='title') %}
+                            <li><b>{{ todo.title }}</b></li>
+			    {% endfor %}
+                        </ul>
+                    </div>
+                        <button type="submit">Search</button>
+                </section>
+                    <p></p>
+                <section class="filters1-mid">
+                    <div class="locations1-mid">
+                        Todo...Employee...
+                        <ul class="popover" tabindex="0">
+			  {% for todo in todos.values()|sort(attribute='title') %}
+                            <li><b>{{ todo.title }}</b></li>
+			    {% endfor %}
+                        </ul>
+                    </div>
+                        <button type="submit">Search</button>
+                </section>
+            </div>
+
+            <div class="display-mid">
+
+	      {% for todo in todos.values()|sort(attribute='title') %}
+	      <p></p>
+	      <ul><b>Job Title: {{ todo.title }}</b>
+              <li>Id: {{ todo.id }}</li>
+	      {%- if todo.completed == 1 %}
+	      <li>Completed: True</li>
+	      {%- else %}
+	      <li>Completed: False</li>
+	      {%- endif %}
+		<li>Due Date: {{ todo.due_date }}
+		  </ul>
+		{% endfor %}
+            </div>
+
+        </section>
+
+		<section class="col col-right">
+		  <div>
+                <form method="post">
+                    <h1>CRUD Console</h1>
+                    <section>
+                    <button type="submit">Add Todo</button>
+                    </section>
+                    <section>
+                        <p>
+                            <label for="title">
+                            Title:
+                            </label> <br />
+                            <input type="text" id="name" name="username">
+                            </p>
+                            <p>
+                                <label for="date">
+                                Due date:
+                                </label> <br />
+                                <input type="date" id="date" name="jobduedate">
+                            </p>
+                            <p>
+                              <label for="completed">
+                                Completed:
+                              </label> <br />
+                              <select id="completed" name="jobcompleted">
+                                    <option value="1">True</option>
+                                    <option value="0">False</option>
+                              </select>
+                            </p>
+                        </section>
+
+                        <section>
+                        <button type="submit">Add the Todo to Employee</button>
+                        </section>
+                        <section>
+                            <p>
+                              <label for="employee_id">
+                                Employee_id:
+                              </label> <br />
+                              <input type="employee_id" id="date" name="employeeid">
+                            </p>
+                        </section>
+                    </form>
+          </div>
+		</section>
+	  </div>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+	  Welcome to BH Website, great to have you!
+	</footer>
+
+  </body>
+
+</html>

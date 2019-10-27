@@ -1,0 +1,52 @@
+form {
+        /* Just to center the form on the page */
+        margin: 20 auto;
+        width: 260px;
+        /* To see the outline of the form */
+        padding: 2em;
+        border: 1px solid #FF5A5F;
+        border-radius: 1em;
+      }
+      form div + div {
+        margin-top: 2em;
+      }
+      label {
+        /* To make sure that all labels have the same size and are properly aligned */
+        display: inline-block;
+        width: 90px;
+        text-align: left;
+      }
+      input, textarea {
+        /* To make sure that all text fields have the same font settings By default, textareas have a monospace font */
+        font: 1em sans-serif;
+        /* To give the same size to all text fields */
+        width: 260px;
+        box-sizing: border-box; /* To harmonize the look & feel of text field border */
+        border: 1px solid #999;
+      }
+      input:focus, textarea:focus {
+        /* To give a little highlight on active elements */
+        border-color: #000;
+      }
+      .button {
+        /* To position the buttons to the same position of the text fields */
+        padding-left: 90px;
+        /* same size as the label elements */
+      }
+      button {
+        /* This extra margin represent roughly the same space as the space between the labels and their text fields */
+        margin-left: .5em;
+      }
+      button {
+        font-size: 18px;
+        background-color: #FF5A5F;
+        height: 30px;
+        width: 40%;
+        border: none;
+        border-radius: 4px;
+        margin: auto 30px auto auto;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }

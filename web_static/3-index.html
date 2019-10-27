@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- HEAD -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>BH todos web app</title>
+
+	<!-- FAVICON -->
+
+	<link rel="shortcut icon" href="images/BH-logo.png">
+
+	<!-- CSS styles -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/108-common.css">
+	<link rel="stylesheet" href="styles/108-header.css">
+	<link rel="stylesheet" href="styles/108-footer.css">
+	<link rel="stylesheet" href="styles/108-left-col.css">
+	<link rel="stylesheet" href="styles/108-mid-col.css">
+	<link rel="stylesheet" href="styles/108-right-col.css"> 
+	<link rel="stylesheet" href="styles/105-form.css"> 
+  </head>
+
+  <!-- BODY -->
+  <body>
+
+	<!-- HEADER -->
+	<header>
+		<div class="navbar">
+			<a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+			<a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+			<a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+			<a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+		</div>
+	</header>
+
+	<main>
+      <div class="container">
+		<section class="col col-left">
+		  <div ></div>
+		</section>
+
+		<section class="col col-mid">
+		  <div>
+				<form action="/my-handling-form-page" method="post">
+					<div>
+					  <label for="mail">E-mail:(abc@example.com)
+					  </label>
+					  <br />
+					  <input type="email" id="mail" name="user_mail">
+					</div>
+					<div>
+						<label for="password">Password:(abc)</label>
+						<br />
+						<input type="text" id="password" name="user_password">
+						</div>
+					<div class="button">
+					  <button type="submit">Login</button>
+					</div>
+				</form>
+		  </div>
+		</section>
+
+		<section class="col col-right">
+		  <div></div>
+		</section>
+	  </div>
+	</main>
+
+	<!-- FOOTER -->
+	<footer>
+	  Welcome to BH Website, great to have you!
+	</footer>
+
+  </body>
+
+</html>
