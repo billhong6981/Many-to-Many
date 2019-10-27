@@ -432,4 +432,3 @@ $(document).ready(function() {
     createLogin(obj)
   })
 })
-
