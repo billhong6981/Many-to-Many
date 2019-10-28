@@ -14,8 +14,10 @@ def users_no_id(user_id=None):
     """
 
     if request.method == 'GET':
-        all_users = storage.all('User')
-        all_users = [obj.to_json() for obj in all_users.values()]
+        all_users = storage.all('User').values()
+        all_users = [obj.to_json() for obj in all_users]
+        for user in all_users:
+            user.pop('password', None)
         return jsonify(all_users)
 
     if request.method == 'POST':
@@ -48,7 +50,9 @@ def user_with_id(user_id=None):
         abort(404, 'Not found')
 
     if request.method == 'GET':
-        return jsonify(user_obj.to_json())
+        user = [user_obj.to_json()]
+        user[0].pop('password', None)
+        return jsonify(user)
 
     if request.method == 'DELETE':
         user_obj.delete()

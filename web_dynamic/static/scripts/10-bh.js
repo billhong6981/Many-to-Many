@@ -216,9 +216,9 @@ function createLogin(obj) {
     data: JSON.stringify(obj||{}),
     async: false,
     success: function(data) {
-      window.location.href = "/10-bh/" + String(data.cache_id) 
+      window.location.href = "/10-bh/" + String(data.cache_id)
     },
-  
+
     error: function(data) {
       $('.right2').remove()
       $('.col-right h3').after(`
@@ -428,6 +428,7 @@ $(document).ready(function() {
     inputs.each( function() {
       obj[this.name] = $(this).val()
     })
+    obj['password'] = $.md5(obj['password']).toLowerCase()
     obj['cache_id'] = $('#email').attr('data-cacheId')
     createLogin(obj)
   })

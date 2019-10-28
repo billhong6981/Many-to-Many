@@ -58,7 +58,10 @@ class User(BaseModel, Base):
         """
         if email is None or pwd is None:
             return False
-        if pwd == self.password and email == self.email:
+        secure = hashlib.md5()
+        secure.update(self.password.encode("utf-8"))
+        secure_password = secure.hexdigest().lower()
+        if pwd == secure_password and email == self.email:
             return True
         else:
             return False
