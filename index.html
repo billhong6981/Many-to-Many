@@ -40,9 +40,14 @@ div.container {
 	max-width: 1000px;
 	margin: 4px auto;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+}
+div.aboutMe {
+    height: 300px;
+    width: 600px;
 }
 
 header {
@@ -136,8 +141,12 @@ footer {
 
 	<main>
       <div class="container">
-            <button onclick="window.location.href = 'http://35.243.203.94';">
+           <button onclick="window.location.href = 'http://35.243.203.94';">
                 <h1>LANDING PAGE</h1></button>
+                <div class="aboutMe">
+                    <h3>About Me: </h3>
+                    <p>Hi! I am Bill Huang, I finished 4 years of college and got a Bachelor degree in Electrical Engineering (double E) in China, I had worked in China Agriculture Bank as networking administator for 3 years. After moving to US, I worked in newspaper company as graphic designer for 20 years in Los Ageles. I am proud of being Holberton School student in January 2019, the school trained student be a software engineer by hand on project base. after 10 months of full web-stack training. Now I familliar with C, Python, Javascript, Linux Shell, MySql. I recently finished a web-app: Many-to-Many, from front-end: Html5, CSS, Javascript; back-end: Python, Mysql, Flask, RESTful API, deployment: webserver setup, Nginx configuration, Gunicorn binding App. Please visite my site at: https://billhong6981.github.io/Many-to-Many/ then click on landing page. Thank You!</p>
+                </div>
 	  </div>
 	</main>
 
