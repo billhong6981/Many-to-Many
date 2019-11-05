@@ -5,20 +5,119 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>BH todos web app</title>
+	<title>Many-to-Many web app</title>
 
 	<!-- FAVICON -->
 
-	<link rel="shortcut icon" href="images/BH-logo.png">
+	<link rel="shortcut icon" href="BH-logo.png">
 
 	<!-- CSS styles -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles/108-common.css">
-	<link rel="stylesheet" href="styles/108-header.css">
-	<link rel="stylesheet" href="styles/108-footer.css">
-	<link rel="stylesheet" href="styles/108-left-col.css">
-	<link rel="stylesheet" href="styles/108-mid-col.css">
-    <link rel="stylesheet" href="styles/108-right-col.css"> 
+    <style type="text/css">
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	color: #484848;
+	font-size: 14px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+main {
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+div.container {
+	max-width: 1000px;
+	margin: 4px auto;
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+	background-color: rgb(148, 233, 248);
+	background-image: url("BH-logo.png");
+	background-repeat: no-repeat;
+	background-position: 20px 50%;
+	padding-top: 2px;
+	padding-bottom: -6px;
+	height: 46px;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+	margin-right: 20px;
+}
+div.collapse {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-right: 20px;
+	padding-right: 10px;
+	font-size: 16px;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: whitesmoke;
+}
+
+/* Style the navigation bar */
+.navbar {
+	width: 100%;
+	overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+	float: right;
+	text-align: center;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+  }
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+	background-color: #000;
+}
+
+  /* Current/active navbar link */
+.active {
+	background-color: #4CAF50;
+}
+
+footer {
+	background: rgb(46, 5, 230);
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	bottom: 0px;
+	position: relative;
+	text-align: center;
+	text-size-adjust: 20px;
+	color: whitesmoke;
+	border-top: 1px solid #CCCCCC;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+	.navbar a {
+	  float: none;
+	  display: block;
+	}
+}
+
+    </style>
 
   </head>
 
@@ -37,137 +136,8 @@
 
 	<main>
       <div class="container">
-		<section class="col col-left">
-		  <div class="location">
-            <h1>Employee Search</h1>
-            <section class="filters-left">
-                <div class="locations-left">
-                    Employees...
-                        <ul class="popover" tabindex="0">
-                            <li><em>Warehouse</em>
-                              <ul>
-                                <li>Bob</li>
-                                <li>John</li>
-                              </ul>
-                            </li>
-                            <li><em>IT department</em>
-                                <ul>
-                                    <li>Doe</li>
-                                    <li>Nill</li>
-                                </ul>
-                            </li>
-                        </ul>
-                </div>
-                    <button type="submit">Search</button>
-            </section>
-            <p></p>
-            <section class="filters1-left">
-                <div class="locations1-left">
-                    Employee...Todo...
-                        <ul class="popover" tabindex="0">
-                            <li><em>Warehouse</em>
-                                <ul>
-                                    <li>Bob</li>
-                                    <li>John</li>
-                                </ul>
-                            </li>
-                            <li><em>IT department</em>
-                                <ul>
-                                    <li>Doe</li>
-                                    <li>Nill</li>
-                                </ul>
-                            </li>
-                        </ul>
-                </div>
-                    <button type="submit">Search</button>
-            </section>
-          </div>
-          
-          <div class="display-left">
-
-          </div>
-		</section>
-
-		<section class="col col-mid">
-            <div class="location">
-                <h1>Todo Search</h1>
-                <section class="filters-mid">
-                    <div class="locations-mid">
-                        Todos...
-                        <ul class="popover" tabindex="0">
-                            <li>Task 1</li>
-                            <li>Task 2</li>
-                            <li>Task 3</li>
-                            <li>Task 4</li>
-                        </ul>
-                    </div>
-                        <button type="submit">Search</button>
-                </section>
-                    <p></p>
-                <section class="filters1-mid">
-                    <div class="locations1-mid">
-                        Todo...Employee...
-                        <ul class="popover" tabindex="0">
-                            <li>Task 1</li>
-                            <li>Task 2</li>
-                            <li>Task 3</li>
-                            <li>Task 4</li>
-                        </ul>            
-                    </div>
-                        <button type="submit">Search</button>
-                </section>
-            </div>
-                      
-            <div class="display-left">
-            
-            </div>
-        </section>
-
-		<section class="col col-right">
-		  <div>
-                <form method="post">
-                    <h1>CRUD Console</h1>
-                    <section>
-                    <button type="submit">Add Todo</button>
-                    </section>
-                    <section>
-                        <p>
-                            <label for="title">
-                            Title:
-                            </label> <br />
-                            <input type="text" id="name" name="username">
-                            </p>
-                            <p>
-                                <label for="date">
-                                Due date:
-                                </label> <br />
-                                <input type="date" id="date" name="jobduedate">
-                            </p>
-                            <p>
-                              <label for="completed">
-                                Completed:
-                              </label> <br />
-                              <select id="completed" name="jobcompleted">
-                                    <option value="1">True</option>
-                                    <option value="0">False</option>
-                              </select>
-                            </p>
-                        </section>
-                        
-                        <section>
-                        <button type="submit">Add the Todo to Employee</button>
-                        </section>
-                        <section>
-                            <p>
-                              <label for="employee_id">
-                                Employee_id:
-                              </label> <br />
-                              <input type="employee_id" id="date" name="employeeid">
-                            </p>
-                        </section>
-                    </form>
-          </div>
-		</section>
+            <button onclick="window.location.href = 'http://35.243.203.94';">
+                <h1>LANDING PAGE</h1></button>
 	  </div>
 	</main>
 
