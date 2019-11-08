@@ -1,4 +1,4 @@
-![](/Users/newuser/Downloads/BH-logo.png)# Many-to-Many: a app for management todos
+# Many-to-Many: a app for management todos
 
 ## 1. Project name:
 Many to Many Web App
@@ -21,13 +21,13 @@ In the database structure, it includes Many-to-Many relation between employees t
 
 
 ## 5. Risks
-           The project is a complete system, it requires a lot of work, it can add more and more features to make the app to do more things. But in the first set up, I will design the table simplest, make the app work at the first time is my first goal. After that, feel free to add more and more features to it.
+The project is a complete system, it requires a lot of work, it can add more and more features to make the app to do more things. But in the first set up, I will design the table simplest, make the app work at the first time is my first goal. After that, feel free to add more and more features to it.
 
 ## 6. Infrastructure
-       The App will run on Virtual Machine environment for building code base and testing, map the host port to guest port, RESTful Api, Web Flask, Web dynamic run on guest virtual machine as micro webapp server, host machine run as client, use browser to request page on server( guest machine). After testing, make sure the The app work functionally, then it will deploy to internet, make the site alive to public,  post to GitHub repository as well.
+The App will run on Virtual Machine environment for building code base and testing, map the host port to guest port, RESTful Api, Web Flask, Web dynamic run on guest virtual machine as micro webapp server, host machine run as client, use browser to request page on server( guest machine). After testing, make sure the The app work functionally, then it will deploy to internet, make the site alive to public,  post to GitHub repository as well.
 
 ## 7. Existing Solutions
-       The good news is: Holberton School has current project AirBnB_Clone, it is a big project for the students in Holberton School, it took 4 months to do parts by parts.  This App structure learn from AirBnB_Clone project. And will add user login validation feature and browser terminal to manipulate backend database.
-       
+The good news is: Holberton School has current project AirBnB_Clone, it is a big project for the students in Holberton School, it took 4 months to do parts by parts.  This App structure learn from AirBnB_Clone project. And will add user login validation feature and browser terminal to manipulate backend database.
+
 ## Author
 Bill Huang
