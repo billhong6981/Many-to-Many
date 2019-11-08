@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance load web app
+After=network.target
+StartLimitAction=reboot
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=ubuntu
+Group=ubuntu
+ExecStart=/usr/bin/env bash /home/ubuntu/Many-to-Many/0-gunicorn_load.sh
+
+[Install]
+WantedBy=multi-user.target
