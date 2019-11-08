@@ -1,4 +1,4 @@
-# AirBnB Clone: Flask Web Application
+# Many-to-Many: Flask Web Application
 
 ## Description
 
@@ -15,21 +15,13 @@ Interface (WSGI).
 * __python style:__ PEP 8 (v. 1.7.0)
 * __web static style:__ [W3C Validator](https://validator.w3.org/)
 
-## Tests
-
-* Test Flask App integration with Storage Engine:
-
 ```
-$ cat 7-dump.sql | mysql -uroot -p
+$ cat 8-dump.sql | mysql -uroot -p
 ```
 
-* Test complete integation with files AirBnB HTML: `10-hbnb.py` &
-  `100-hbnb.html`. Execute from root directory (`AirBnB_clone`) with all the
-  necessary environmental variables to establish the database storage model:
 
 ```
-$ cat 100-dump.sql | mysql -uroot -p
-$ python3 -m web_flask.100-hbnb
+$ python3 -m web_flask.10-bh
 ```
 
 ## License
