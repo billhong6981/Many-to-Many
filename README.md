@@ -1,4 +1,5 @@
-<img src="https://github.com/billhong6981/Many-to-Many/blob/master/BH-logo.png" width="160" height=auto />
+<img src="https://github.com/billhong6981/Many-to-Many/blob/master/BH-logo.png" width="60" height="60" />
+
 # Many-to-Many: a app for management todos
 
 ## Project name:
@@ -15,12 +16,12 @@ To set up the databases, use command:
 cat /dev/8-dump.sql | mysql -uroot -p;
 ```
 To connect to the MySQL database sever, user environment variable:
-``````
+```
 $ HBNB_MYSQL_USER=bh_dev HBNB_MYSQL_PWD=bh_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=bh_dev_db HBNB_TYPE_STORAGE=db \
 [COMMAND HERE]
 ```
 
-## ## Environment
+## Environment
 
 * __OS:__ Ubuntu 14.04 LTS
 * __language:__ Python 3.4.3
@@ -47,11 +48,11 @@ In the Frontend, no use any Frameworks to help, pure HTML, CSS, JAVASCRIPT are u
 
 
 ## Infrastructure
-<img src="https://github.com/billhong6981/Many-to-Many/blob/master/dev/WebStack.png />
+<img src="https://github.com/billhong6981/Many-to-Many/blob/master/dev/WebStack.png" />
 
 
 ## Databases
-<img src="https://github.com/billhong6981/Many-to-Many/blob/master/dev/DataStructure.png />
+<img src="https://github.com/billhong6981/Many-to-Many/blob/master/dev/DataStructure.png" />
 
 
 ## Related Project
