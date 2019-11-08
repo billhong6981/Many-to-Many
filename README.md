@@ -1,8 +1,8 @@
 <img src="https://github.com/billhong6981/Many-to-Many/blob/master/BH-logo.png" width="60" height="60" />
 
-# Many-to-Many: a app for management todos
+# Many-to-Many: Employee Data And Task Management Tool
 
-## Project name:
+## Project Name:
 Many to Many Web App
 
 ## Description
@@ -29,8 +29,8 @@ $ HBNB_MYSQL_USER=bh_dev HBNB_MYSQL_PWD=bh_dev_pwd HBNB_MYSQL_HOST=localhost HBN
 * __application server:__ Flask 0.12.2, Jinja2 2.9.6
 * __web server gateway:__ gunicorn (version 19.7.1)
 * __database:__ mysql Ver 14.14 Distrib 5.7.18
-* __documentation:flasgger==0.6.6
-* __style:__
+* __documentation:__ flasgger==0.6.6
+* __style sheet:__ CSS3
 * __python:__ PEP 8 (v. 1.7.0)
 * __web static:__ [W3C Validator](https://validator.w3.org/)
 * __bash:__ ShellCheck 0.3.3
