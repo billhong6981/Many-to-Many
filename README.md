@@ -1,12 +1,15 @@
-# Many-to-Many: a app for management todos
+![][BH-logo.png]# Many-to-Many: a app for management todos
 
 ## 1. Project name:
 Many to Many Web App
 
-Expects when the project finished, it will be deployed to web server, the company management team can load it on browser as client user. When searching Department, it will show up all employees in the department Todos information, the tasks status (finished--True or not finished--False). When searching on specific employee, it will show up all Todo tasks assigned to the employee( implemented Single to Many database search). If search on single Todo task, it will show up how many employees are assigned on that task( another implemented Single to Many search). Finally implemented Many to Many search.
+## Description
+This App is a searching and manipulation employee data and task management tool, specifically to handle management of complex interdependent tasks.
+The app was deployed at [visit website](http://35.243.203.94/)
+You are welcome to checkout my blog post [Blog](https://www.linkedin.com/pulse/hand-on-project-your-friend-bill-huang/)
 
 
-## 2. Team Members
+## Team Members
 HongTu Huang (solo)
 
 ## 3. Technologies
@@ -29,5 +32,10 @@ The App will run on Virtual Machine environment for building code base and testi
 ## 7. Existing Solutions
 The good news is: Holberton School has current project AirBnB_Clone, it is a big project for the students in Holberton School, it took 4 months to do parts by parts.  This App structure learn from AirBnB_Clone project. And will add user login validation feature and browser terminal to manipulate backend database.
 
+
+
 ## Author
 Bill Huang
+
+## License
+MIT License
