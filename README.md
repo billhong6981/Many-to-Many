@@ -5,9 +5,13 @@
 ## Project Name:
 Many to Many Web App
 
+## Deployment
+The app is not responsive design currently, may re-design later.  
+The app was deployed to Google Cloud [checkout on me](http://34.94.254.88)
+[GitHub Landing Page](http://35.243.203.94/)  
+
 ## Description
 This App is a searching and manipulation employee data and task management tool, specifically to handle management of complex interdependent tasks.  
-The app was deployed at [visit website](http://35.243.203.94/)  
 You are welcome to checkout my blog post [Blog](https://www.linkedin.com/pulse/hand-on-project-your-friend-bill-huang/)
 
 Many-to-Many application and website, including the database, storage, RESTful API, Web Framework, and Front End.  Currently the application is designed to run with Database Storage Engine:
