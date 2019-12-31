@@ -1,5 +1,5 @@
 const departs = {}
-$.getJSON('http://34.94.254.88/api/v1/departments', data => {
+$.getJSON('http://34.94.254.88:5001/api/v1/departments', data => {
   data.forEach(d => {
     departs[d.id] = `${d.name}`
   })
@@ -7,7 +7,7 @@ $.getJSON('http://34.94.254.88/api/v1/departments', data => {
 
 function loadEmployee(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/employees_search/',
+    url: 'http://34.94.254.88:5001/api/v1/employees_search/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -34,7 +34,7 @@ function populateLeft(data) {
 
 function loadTodo(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/todos_get/',
+    url: 'http://34.94.254.88:5001/api/v1/todos_get/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -61,7 +61,7 @@ function populateMid(data) {
 
 function loadEmpTodo(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/employees_gettodo/',
+    url: 'http://34.94.254.88:5001/api/v1/employees_gettodo/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -74,7 +74,7 @@ function loadEmpTodo(obj) {
 
 function loadTodoEmp(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/todos_search/',
+    url: 'http://34.94.254.88:5001/api/v1/todos_search/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -88,7 +88,7 @@ function loadTodoEmp(obj) {
 function loadForm(obj) {
   let s = Object.values(obj)[0]
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/' + s,
+    url: 'http://34.94.254.88:5001/api/v1/' + s,
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -106,7 +106,7 @@ function populateForm(data) {
 
 function createDepartment(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/departments/',
+    url: 'http://34.94.254.88:5001/api/v1/departments/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -132,7 +132,7 @@ function createDepartment(obj) {
 function createEmployee(obj) {
   let depId = obj.department_id
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/departments/' + depId + '/employees',
+    url: 'http://34.94.254.88:5001/api/v1/departments/' + depId + '/employees',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -157,7 +157,7 @@ function createEmployee(obj) {
 
 function createTodo(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/todos/',
+    url: 'http://34.94.254.88:5001/api/v1/todos/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -184,7 +184,7 @@ function createEmployeeTodo(obj) {
   let empId = obj.employee_id
   let todoId = obj.todo_id
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/employees/' + empId + '/todos/' + todoId,
+    url: 'http://34.94.254.88:5001/api/v1/employees/' + empId + '/todos/' + todoId,
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
@@ -209,14 +209,14 @@ function createEmployeeTodo(obj) {
 
 function createLogin(obj) {
   $.ajax({
-    url: 'http://34.94.254.88/api/v1/logins/',
+    url: 'http://34.94.254.88:5001/api/v1/logins/',
     type: 'POST',
     contentType: 'application/json',
     dataType: 'json',
     data: JSON.stringify(obj||{}),
     async: false,
     success: function(data) {
-      window.location.href = String(data.cache_id)
+      window.location.href = "/10-bh/" + String(data.cache_id)
     },
 
     error: function(data) {
@@ -233,7 +233,7 @@ function createLogin(obj) {
 }
 
 $(document).ready(function() {
-  $.get('http://34.94.254.88/api/v1/status', (data) => {
+  $.get('http://34.94.254.88:5001/api/v1/status', (data) => {
     if (data.status === 'OK') {
       $('span#api_status').addClass('available');
     }

@@ -216,7 +216,7 @@ function createLogin(obj) {
     data: JSON.stringify(obj||{}),
     async: false,
     success: function(data) {
-      window.location.href = String(data.cache_id)
+      window.location.href = "/10-bh/" + String(data.cache_id)
     },
 
     error: function(data) {
